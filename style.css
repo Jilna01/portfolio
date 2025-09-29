@@ -4,10 +4,11 @@ body{
     line-height: 1.6;
     background:#0f172a;
     color: #f8f9fa;
+    transition: background 0.4s ease, color 0.4s ease;
 }
 h1, h2, h3 {
     font-weight: bold;
-    margin-bottom: 1rem;
+    margin-bottom: 0;
 }
 section {
     padding: 3rem 2rem;
@@ -199,10 +200,11 @@ footer{
     right: -100%;
     width: 70%;
     height: 100%;
-    background: #fff;
+    background: #1e293b;
+    color: white;
     z-index: 1000;
     transition: right 0.4s ease;
-    box-shadow: -2px 0 8px rgba(0,0,0,0.2);
+    box-shadow: -2px 0 8px rgba(0,0,0,0.4);
 }
 .mobile-menu.active{
     right: 0;
@@ -217,14 +219,24 @@ footer{
 }
 .mobile-menu ul li a{
     font-size: 2rem;
-    color: #333;
+    color: white;
     text-decoration: none;
+    transition: color 0.3s ease;
 }
+.mobile-menu ul li a:hover {
+  color: #ffcc00; /* your accent yellow */
+}
+
 .close-btn{
     font-size: 2rem;
     cursor: pointer;
     float: right;
     margin-bottom: 1rem;
+    color: #f8f9fa;
+    padding: 1rem;
+    display: block;
+    text-align: right;
+
 }
 @media(max-width:768px){
     .nav-links{
@@ -258,8 +270,17 @@ footer{
     font-weight: 600;
     cursor: pointer;
     font-size: 1.1rem;
-    color: #333;
+    color: white;
  }
+ .accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.accordion-content.open {
+  max-height: 500px; /* or use auto with JS height calc */
+}
  .indicator{
     color: #5c3c92;
     font-size: 1.2em;
@@ -276,6 +297,10 @@ footer{
     overflow: hidden;
     transition: max-height 0.4s ease-in-out;
  }
+ .accordion-content.open {
+  max-height: 500px; /* or use JS to calculate height */
+}
+
  .accordion-content ul{
     list-style-type: none;
     padding: 0;
@@ -286,14 +311,6 @@ footer{
     font-size: 0.95rem;
     position: relative;
     padding-left: 20px;
- }
- .accordion-content ul li::before{
-    content:'->';
-    position:absolute;
-    left: 0;
-    color: #333;
-    font-size: 1.1rem;
-    top: 5px;
  }
  .accordion-item.is-open .accordion-content{
     max-height: 300px;
@@ -397,3 +414,45 @@ footer{
  .fade-in.active h2::after{
     width: 60px;
  }
+ body.light-theme {
+  background: #f8f9fa;
+  color: #0f172a;
+}
+
+body.light-theme header,
+body.light-theme footer {
+  background: #e0e0e0;
+  color: #333;
+}
+
+body.light-theme .card,
+body.light-theme .accordion-item {
+  background: #fff;
+  color: #333;
+}
+
+#theme-toggle {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: transparent;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+body.dark-theme {
+  background: #0f172a;
+  color: #f8f9fa;
+}
+
+body.dark-theme header,
+body.dark-theme footer {
+  background: #333;
+  color: #fff;
+}
+
+body.dark-theme .card,
+body.dark-theme .accordion-item {
+  background: #333;
+  color: #f8f9fa;
+}

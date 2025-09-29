@@ -8,14 +8,15 @@
     <script src="script.js" defer></script>
 </head>
 <body>
+    <button id="theme-toggle">🌙</button>
     <!-- Navigation -->
      <header>
         <nav class="navbar">
             <h1 class="logo">JILNA K P</h1>
-            <div class="hamburger" onclick="tooggleMenu()"></div>
+            <div class="hamburger" onclick="toggleMenu()">☰</div>
         </nav>
         <div class="mobile-menu" id="mobile-menu">
-            <span class="close-btn" onclick="toggleMenu()"></span>
+        <span class="close-btn" onclick="toggleMenu()">×</span>
             <ul>
                 <li><a href="#home" onclick="toggleMenu()">Home</a></li>
                 <li><a href="#about" onclick="toggleMenu()">About</a></li>
@@ -29,7 +30,8 @@
      <!--Hero-->
      <section id="home" class="hero">
         <video autoplay muted loop playsinline class="hero-video">
-            <source src="video/bckgroundvdo - Trim.mp4" type="video/mp4">
+            <source src="video/backgroundvideo.mp4" type="video/mp4">
+            Your browser does not support the video tag.
         </video>
         <div class="hero-content">
             <img src="images/me.jpg" alt="Jilna K P" class="profile-pic">
@@ -52,59 +54,59 @@
      <!--education-->
      <section id="education" class="content-section fade-in">
         <h2>Education</h2>
-        <div class="education-accordin">
-            <div class="accordin-item is-open">
-                <div class="accordin-header">
+        <div class="education-accordion">
+            <div class="accordion-item">
+                <div class="accordion-header">
                     <span class="indicator">></span>
                     Master's Degree
-                    <span class="toggle-icon">^</span>
+                    <span class="toggle-icon">▲</span>
                 </div>
                 <div class="accordion-content">
                     <ul>
-                        <li>Master of Computer Application</li>
-                        <li>Dr. Janaki Ammal Campus Palayad</li>
-                        <li>2023-2025</li>
+                        <li>➤Master of Computer Application</li>
+                        <li>➤Dr. Janaki Ammal Campus Palayad</li>
+                        <li>➤2023-2025</li>
                     </ul>
                 </div>
             </div>
-            <div class="accordin-item">
-                <div class="accordin-header">
+            <div class="accordion-item">
+                <div class="accordion-header">
                     <span class="indicator">></span>
                     Bachelor's Degree
-                    <span class="toggle-icon">v</span>
+                    <span class="toggle-icon">▲</span>
                 </div>
                 <div class="accordion-content">
                     <ul>
-                        <li>Bachelor of Computer Application</li>
-                        <li>Concord Arts and Science College Muttannur</li>
-                        <li>2019-2022</li>
+                        <li>➤Bachelor of Computer Application</li>
+                        <li>➤Concord Arts and Science College Muttannur</li>
+                        <li>➤2019-2022</li>
                     </ul>
                 </div>
             </div>
-            <div class="accordin-item">
-                <div class="accordin-header">
+            <div class="accordion-item">
+                <div class="accordion-header">
                     <span class="indicator">></span>
                     Higher Secondary School
-                    <span class="toggle-icon">v</span>
+                    <span class="toggle-icon">▲</span>
                 </div>
                 <div class="accordion-content">
                     <ul>
-                        <li>Computer Science</li>
-                        <li>MHSS Mattannur</li>
-                        <li>2017-2019</li>
+                        <li>➤Computer Science</li>
+                        <li>➤MHSS Mattannur</li>
+                        <li>➤2017-2019</li>
                     </ul>
                 </div>
             </div>
-            <div class="accordin-item">
-                <div class="accordin-header">
+            <div class="accordion-item">
+                <div class="accordion-header">
                     <span class="indicator">></span>
                     High School 
-                    <span class="toggle-icon">v</span>
+                    <span class="toggle-icon">▲</span>
                 </div>
                 <div class="accordion-content">
                     <ul>
-                        <li>Sree Sankara Vidya Peetam</li>
-                        <li>2016-2017</li>
+                        <li>➤Sree Sankara Vidya Peetam</li>
+                        <li>➤2016-2017</li>
                     </ul>
                 </div>
             </div>
